@@ -4,7 +4,7 @@
   "description": "just basic data structures.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "2d": "npx nodemon 2d.js"
   },
   "repository": {
     "type": "git",
