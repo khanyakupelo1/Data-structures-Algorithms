@@ -1,7 +1,7 @@
 {
   "name": "data-structures",
   "version": "1.0.0",
-  "description": "just basic data structures.",
+  "description": "just basic data structures!",
   "main": "index.js",
   "scripts": {
     "2d": "npx nodemon 2d.js"
