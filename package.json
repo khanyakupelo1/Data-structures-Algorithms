@@ -4,7 +4,7 @@
   "description": "just basic data structures!",
   "main": "index.js",
   "scripts": {
-    "2d": "npx nodemon 2d.js"
+    "2d": "npx nodemon 2d/2d.js"
   },
   "repository": {
     "type": "git",
