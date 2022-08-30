@@ -1,0 +1,23 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "just basic data structures.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanyakupelo1/Data-Structures-Cheatsheet.git"
+  },
+  "keywords": [
+    "data",
+    "structures"
+  ],
+  "author": "Khanya Kupelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khanyakupelo1/Data-Structures-Cheatsheet/issues"
+  },
+  "homepage": "https://github.com/khanyakupelo1/Data-Structures-Cheatsheet#readme"
+}
