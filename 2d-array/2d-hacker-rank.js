@@ -23,7 +23,7 @@ function readLine() {
 }
 
 function hourglassSum(arr) {
-  let hourglasses = [];
+  let hourglassSums = [];
 
   for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {
@@ -36,15 +36,15 @@ function hourglassSum(arr) {
         arr[i + 2][j + 1] +
         arr[i + 2][j + 2];
 
-      hourglasses.push(sum);
+      hourglassSums.push(sum);
     }
   }
 
-  let max = hourglasses[0];
+  let max = hourglassSums[0];
 
-  for (let i = 0; i < hourglasses.length; i++) {
-    if (hourglasses[i] > max) {
-      max = hourglasses[i];
+  for (let i = 0; i < hourglassSums.length; i++) {
+    if (hourglassSums[i] > max) {
+      max = hourglassSums[i];
     }
   }
   return max;
