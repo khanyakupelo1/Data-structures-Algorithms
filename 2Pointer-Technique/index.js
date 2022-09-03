@@ -15,15 +15,16 @@ const findTwoSum = (numbers, target) => {
             console.log(`P1: ${p1} P2: ${p2} number to find: ${numberToFind}`)
             if (numberToFind === numbers[p2]) {
                 return [p1, p2]
-                // answer.push(arr[p2])
             }
         }
-
     }
 
     // There is no existing solution on the given array
     return null;
 }
 
-findTwoSum(numbers, target);
+const sum= findTwoSum(numbers, target);
+console.log(sum)
+console.log(numbers[sum[0]])
+console.log(numbers[sum[1]])
 
