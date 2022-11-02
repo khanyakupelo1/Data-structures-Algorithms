@@ -19,4 +19,5 @@ const findNemo = (arr) => {
 };
 
 
-findNemo(everyone);
+findNemo(everyone); // O(n) ---> it takes linear time to find nemo
+// Big O depends on the number of inputs 
