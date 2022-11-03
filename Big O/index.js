@@ -48,7 +48,7 @@ console.log("------------ O(n^2) --------------------------------");
 /**
  * Log all pairs of array
  */
-let pairs = ["a", "b", "c", "d", "e"];
+let pairs = ["a", "b", "c", "d", "e", "f"];
 let logAllPairs = function (pairs) {
     for (let i = 0; i < pairs.length; i++) {
         for (let j = 0; j < pairs.length; j++) {
