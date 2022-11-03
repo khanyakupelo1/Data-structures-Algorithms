@@ -4,6 +4,10 @@ const performance = require('perf_hooks').performance;
 let everyone = ["darla", "dory", "bruce", "marlin", "gill", "bloat", "hank", "nemo", "nigel", "squirt"];
 let nemo = ["nemo"];
 let large = new Array(1000000).fill("Nemo");
+let pairs = ["a", "b", "c", "e", "e", "f"];
+
+
+
 /**
  * Big O depends on the number of inputs 
  * @param {*} arr 
@@ -20,8 +24,28 @@ const findNemo = (arr) => {
 
 };
 
+/**
+ * Find an item on the array
+ */
+
+// item
+let foundItem = pairs.find(
+    // true or false
+    (item) => {
+        return item === "e";
+    }
+);
+
+
+let results = pairs.filter((item, index, arr) => {
+    return item === "e" || item === 'f';
+});
+
+
 console.log("------------ O(n) --------------------------------");
 findNemo(everyone); // O(n) ---> it takes linear time to find nemo
+console.log(foundItem);
+console.log(results);
 
 
 
@@ -48,7 +72,6 @@ console.log("------------ O(n^2) --------------------------------");
 /**
  * Log all pairs of array
  */
-let pairs = ["a", "b", "c", "e", "e", "f"];
 let logAllPairs = function (pairs) {
     for (let i = 0; i < pairs.length; i++) {
         for (let j = 0; j < pairs.length; j++) {
@@ -59,29 +82,3 @@ let logAllPairs = function (pairs) {
 };
 
 logAllPairs(pairs);
-
-
-
-
-
-
-console.log("Tests array function: Running O(n)");
-/**
- * Find an item on the array
- */
-
-// item
-let foundItem = pairs.find(
-    // true or false
-    (item) => {
-        return item === "e";
-    }
-);
-
-console.log(foundItem);
-
-let results = pairs.filter((item, index, arr) => {
-    return item === "e" || item === 'f';
-});
-
-console.log(results);
