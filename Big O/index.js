@@ -48,7 +48,7 @@ console.log("------------ O(n^2) --------------------------------");
 /**
  * Log all pairs of array
  */
-let pairs = ["a", "b", "c", "d", "e", "f"];
+let pairs = ["a", "b", "c", "e", "e", "f"];
 let logAllPairs = function (pairs) {
     for (let i = 0; i < pairs.length; i++) {
         for (let j = 0; j < pairs.length; j++) {
@@ -59,3 +59,29 @@ let logAllPairs = function (pairs) {
 };
 
 logAllPairs(pairs);
+
+
+
+
+
+
+console.log("Tests array function: Running O(n)");
+/**
+ * Find an item on the array
+ */
+
+// item
+let foundItem = pairs.find(
+    // true or false
+    (item) => {
+        return item === "e";
+    }
+);
+
+console.log(foundItem);
+
+let results = pairs.filter((item, index, arr) => {
+    return item === "e" || item === 'f';
+});
+
+console.log(results);
