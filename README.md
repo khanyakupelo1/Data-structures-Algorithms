@@ -1,6 +1,6 @@
 # How to use Repo
 
-Each topic below has its own branch on the Repo. The Main branch contains all topics.
+The Main branch contains all topics.
 
 - Big O notation
 
