@@ -84,6 +84,42 @@ let logAllPairs = function (pairs) {
 logAllPairs(pairs);
 
 
+
+// Find first, and last
+const tweets = [
+    {
+        tweet: 'hi',
+        date: '2012'
+    },
+    {
+        tweet: 'how are you?',
+        date: '2014'
+    }, {
+        tweet: 'Thank you!',
+        date: '2012'
+    }
+];
+let findFirstLast = (tweets) => {
+    for (let i = 0; i < tweets.length; i++) {
+        const element = tweets[i];
+
+        for (let index = i + 1; index < tweets.length; index++) {
+            const cur = tweets[index];
+
+            if (element.date === cur.date) {
+                console.log(element);
+                console.log(cur);
+
+            }
+
+        }
+
+    }
+};
+
+findFirstLast(tweets);
+
+
 console.log("------------ O(n!) --------------------------------");
 
 /**
@@ -103,4 +139,4 @@ let factorial = (number) => {
 };
 
 console.log(factorial(number));
-
+;
