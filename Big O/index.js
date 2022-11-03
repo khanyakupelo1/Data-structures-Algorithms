@@ -82,3 +82,25 @@ let logAllPairs = function (pairs) {
 };
 
 logAllPairs(pairs);
+
+
+console.log("------------ O(n!) --------------------------------");
+
+/**
+ * Factorial
+ */
+
+let number = 5;
+
+let factorial = (number) => {
+    let answer = 1;
+    for (let index = 1; index <= number; index++) {
+        answer = answer * index;
+
+
+    }
+    return answer;
+};
+
+console.log(factorial(number));
+
