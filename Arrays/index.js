@@ -21,3 +21,30 @@ console.log(strings);
 let names = [];
 strings.splice(2, 0, "w");
 console.log(strings);
+
+// Instantiate
+class Player {
+    constructor(name, type) {
+        this.name = name;
+        this.type = type;
+    }
+
+    introduce() {
+        console.log(`${this.name}: ${this.type}`);
+    }
+};
+
+class Wizard extends Player {
+    constructor(name, type, age) {
+        super(name, type);
+        this.age = age;
+    }
+
+    play() {
+        console.log(`I am a : ${this.type}`);
+    }
+}
+
+let wizard = new Wizard("Khanya", "Healer");
+wizard.introduce();
+wizard.play();
