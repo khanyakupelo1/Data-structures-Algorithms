@@ -38,12 +38,41 @@ class CustomArray {
 
     }
 
+    /**
+     * Incomplete
+     * @param {*} index 
+     * @param {*} deleteCount 
+     * @param {*} item 
+     */
+    insert(index, deleteCount, item) {
+        // iterate over all items
+
+        for (let i = 0; i < this.length; i++) {
+            const element = this.data[i];
+            // remove @ index
+            if (deleteCount > 0) {
+                delete this.data[index];
+                deleteCount--;
+
+            }
+            if (index === i) {
+                this.data[i] = item;
+            }
+
+
+        }
+
+    }
+
 }
 
 const CustomA = new CustomArray();
-CustomA.push("Healer");
-CustomA.push("!");
-CustomA.delete(0);
+CustomA.push("A");
+CustomA.push("B");
+CustomA.push("E");
+CustomA.push("D");
+CustomA.insert(2, 0, "C");
+// CustomA.delete(0);
 console.log(CustomA);
 // CustomA.pop();
 // console.log(CustomA);
