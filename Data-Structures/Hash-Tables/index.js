@@ -1,50 +1,19 @@
-console.log("Data structures: Arrays");
+console.log("Data structures: Hash-Table");
 
-const strings = ["a", "b", "c", "d", "e"];
-
-strings[2];
-
-// Add a string: O(1)
-strings.push("f");
-console.log(strings);
-
-
-// Remove a string: O(1), because removes last element
-strings.pop();
-console.log(strings);
-
-// add at the beginning: O(n), because we have to shift items
-strings.unshift("ß");
-console.log(strings);
-
-// add item in the middle: O(n), because we have to shift items
-let names = [];
-strings.splice(2, 0, "w");
-console.log(strings);
-
-// Instantiate
-class Player {
-    constructor(name, type) {
-        this.name = name;
-        this.type = type;
-    }
-
-    introduce() {
-        console.log(`${this.name}: ${this.type}`);
+let user = {
+    age: 29,
+    name: "Khanya",
+    magic: true,
+    scream: function () {
+        console.log("aaah");
     }
 };
 
-class Wizard extends Player {
-    constructor(name, type, age) {
-        super(name, type);
-        this.age = age;
-    }
 
-    play() {
-        console.log(`I am a : ${this.type}`);
-    }
-}
+console.log(user.age); // O(1)
 
-let wizard = new Wizard("Khanya", "Healer");
-wizard.introduce();
-wizard.play();
+user.spell = "vala!"; // O(1)
+
+console.log(user);// O(1)
+
+user.scream();// O(1)
