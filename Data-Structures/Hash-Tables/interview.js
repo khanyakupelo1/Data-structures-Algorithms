@@ -23,6 +23,38 @@ const findFirstRecurringNumber = (scores) => {
     return undefined;
 };
 
+// console.group("Should return 2");
+
+// console.log(findFirstRecurringNumber(scores));
+
+
+// console.group("Should return 1");
+
+// console.log(findFirstRecurringNumber(scores_2));
+
+// console.group("Should return undefined");
+
+// console.info(findFirstRecurringNumber(scores_3));
+
+
+// take in an array of scores as a parameter
+
+const findFirstRecurringNumber_2 = (scores) => {
+    for (let i = 0; i < scores.length; i++) {
+        for (let j = i + 1; j < scores.length; j++) {
+            // check if item at index i is equal to item at index j+1
+
+            if (scores[j] === scores[i])
+                return scores[i];
+
+        }
+    }
+
+    return undefined;
+
+};
+
+
 console.group("Should return 2");
 
 console.log(findFirstRecurringNumber(scores));
