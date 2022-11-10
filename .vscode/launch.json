@@ -21,6 +21,15 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/Big O/index.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Interview Question",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Data-Structures/Hash-Tables/interview.js"
         }
     ]
 }

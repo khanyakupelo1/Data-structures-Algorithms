@@ -39,14 +39,31 @@ class CustomHashTable {
         }
         return undefined;;
     };
+
+
+    keys() {
+        const keysArray = [];
+        console.log(this.data.length);
+        for (let i = 0; i < this.data.length; i++) {
+            if (this.data[i]) {
+                keysArray.push(this.data[i][0][0]);
+            }
+        }
+        return keysArray;
+    }
+
+    // Grab all the values
 }
 
 
 const custom = new CustomHashTable(2);
 custom.set('grapes', 10000);
 custom.set('apples', 10);
+custom.set('bananas', 20);
+custom.set('oranges', 10);
 
 
 // console.log(custom.data);
 console.log(custom.get("apples"));
+console.log(custom.keys());
 // console.log(custom.get("apples"));
