@@ -5,6 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Hash-Table",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Data-Structures/Hash-Tables/Custom-Hash-Table.js"
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
