@@ -1,6 +1,6 @@
 
 // Input sorted array of numbers
-const scores = [2, 5, 1, 2, 3, 4, 5, 6, 7,];
+const scores = [2, 5, 5, 2, 3, 4, 5, 6, 7,];
 const scores_2 = [2, 1, 1, 2, 3, 4, 5, 6, 7,];
 const scores_3 = [2, 3, 4, 5, 6, 7,];
 
