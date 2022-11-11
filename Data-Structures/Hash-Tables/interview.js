@@ -67,3 +67,6 @@ console.log(findFirstRecurringNumber(scores_2));
 console.group("Should return undefined");
 
 console.info(findFirstRecurringNumber(scores_3));
+
+
+// 
