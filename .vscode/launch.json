@@ -30,6 +30,24 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/Data-Structures/Hash-Tables/interview.js"
-        }
+        },
+        {
+            "name": "Pointers",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Data-Structures/LinkedLists/index.js"
+        },
+        {
+            "name": "Custom LinkedList",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Data-Structures/LinkedLists/Custom.js"
+        },
     ]
 }
