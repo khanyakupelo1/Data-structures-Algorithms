@@ -1,6 +1,12 @@
 
 console.group("LinkedList");
 
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
+}
 
 class LinkedList {
     constructor(value) {
@@ -19,10 +25,12 @@ class LinkedList {
      * @returns LinkedList
      */
     append = (value) => {
-        const newNode = {
-            value: value,
-            next: null
-        };
+        // Used DRY programming and OOP
+        const newNode = new Node(value);
+        // const newNode = {
+        //     value: value,
+        //     next: null
+        // };
 
         this.tail.next = newNode;
         this.tail = newNode;
@@ -32,10 +40,14 @@ class LinkedList {
     };
 
     prepend = (value) => {
-        const newNode = {
-            value: value,
-            next: null
-        };
+
+        // Used Don't Repeat Yourself programming and OOP
+        const newNode = new Node(value);
+
+        // const newNode = {
+        //     value: value,
+        //     next: null
+        // };
 
         newNode.next = this.head;
         this.head = newNode;
