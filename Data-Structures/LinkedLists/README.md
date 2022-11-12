@@ -24,3 +24,6 @@ ________________________________________________________________
   - object
   - node
   - or place in memory
+- Garbage collection 
+- In javascript memory is managed automatically
+  - If for example, there is no OBJECT referencing a location in memory then that data will be removed.
