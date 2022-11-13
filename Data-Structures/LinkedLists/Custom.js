@@ -94,7 +94,41 @@ class LinkedList {
 
     }
 
+    // 1-> 10-> 16-> 88
+    reverse = (head) => {
+        console.log(head);
+        if (head.next === null) {
+            console.log("Only one node exists \n");
+            return;
+        };
 
+        let currNode = head;
+        let newLL = new LinkedList(this.head.value); // O(n)
+
+        while (currNode.next !== null) {
+            newLL.prepend(currNode.value);
+            currNode = currNode.next;
+        }
+
+        return newLL.prepend(currNode.value);
+    };
+
+    optimizedReversed = () => {
+
+        let first = this.head;// 1
+        this.tail = this.head; // 1
+        let second = first.next; // 10
+
+        while (second) {
+            let third = second.next; // prevents second.next from being deleted from memory (18)
+            second.next = first;
+            first = second; // 1 => 10
+            second = third;  // 10 => 16
+        }
+
+        this.head.next = null;
+        this.head = first;
+    };
 
     traverseToIndex(index) {
         //Check parameters
@@ -133,7 +167,7 @@ class LinkedList {
     }
 
 
-}
+};
 
 const myLinkedList = new LinkedList(10);
 myLinkedList.printList('🟢 Initialized');
@@ -169,3 +203,11 @@ myLinkedList_2.printList('🔵 Add 1, 10');
 
 myLinkedList_2.remove(1);
 myLinkedList_2.printList('🔵 Remove 1');
+console.clear();
+const myLinkedList_3 = new LinkedList(1);
+myLinkedList_3.append(10);
+myLinkedList_3.append(16);
+myLinkedList_3.append(88);
+myLinkedList_3.reverse(myLinkedList_3.head);
+myLinkedList_3.optimizedReversed();
+
