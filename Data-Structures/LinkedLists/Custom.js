@@ -58,16 +58,19 @@ class LinkedList {
     /** */
     insert = (index, value) => {
 
-        if (index > this.length)
-            return `index ${index} is out of bounds`;
+        if (this.isValidIndex(index))
+            return false;
 
         let curNode = this.head;
         let curIndex = 1;
         let newNode = new Node(value);
-        let previous = curNode;
+        let previous = curNode; // reference 
+
+        if (this.isNewHead(index)) {
+            return this.prepend(value);
+        }
 
         while (curNode !== null) {
-
             if (index === curIndex) {
 
                 newNode.next = curNode; // helps from being lost in memory
@@ -79,7 +82,6 @@ class LinkedList {
             previous = curNode;
             curNode = curNode.next; // will move to next node
             curIndex++;
-
         }
         return `insertion failed, please try again!`;
     };
@@ -99,6 +101,14 @@ class LinkedList {
         return;
     };
 
+
+    isNewHead(index) {
+        return index === 1;
+    }
+
+    isValidIndex(index) {
+        return index > this.length && console.log(`index ${index} is out of bounds`);
+    }
 }
 
 const myLinkedList = new LinkedList(10);
@@ -117,6 +127,8 @@ myLinkedList.printList('🟣 Prepend 1');
 myLinkedList.insert(3, 99);
 myLinkedList.printList('🔵 Insert 99');
 
-myLinkedList.insert(5, 30);
-myLinkedList.printList('🔵 Insert 99');
+if (!myLinkedList.insert(1, 30))
+    myLinkedList.printList('🔵 Insert out of bounds index');
+else
 
+    myLinkedList.printList('🔵 Insert 30');
