@@ -64,19 +64,19 @@ class LinkedList {
         let curNode = this.head;
         let curIndex = 1;
         let newNode = new Node(value);
+        let previous = curNode;
+
         while (curNode !== null) {
 
-
-            // find index of curNode
             if (index === curIndex) {
-                console.log(`Found index: ` + curIndex + `  Node: ` + curNode.value);
 
                 newNode.next = curNode; // helps from being lost in memory
-                this.head.next = newNode;
+                previous.next = newNode;
+                this.length++;
                 return curNode;
             }
 
-            // what happens if not equal
+            previous = curNode;
             curNode = curNode.next; // will move to next node
             curIndex++;
 
@@ -114,7 +114,9 @@ myLinkedList.prepend(1);
 myLinkedList.printList('🟣 Prepend 1');
 
 
+myLinkedList.insert(3, 99);
 myLinkedList.printList('🔵 Insert 99');
-const newNode = myLinkedList.insert(3, 99);
 
+myLinkedList.insert(5, 30);
+myLinkedList.printList('🔵 Insert 99');
 
