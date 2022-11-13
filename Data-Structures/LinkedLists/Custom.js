@@ -1,5 +1,4 @@
 
-console.group("LinkedList");
 
 class Node {
     constructor(value) {
@@ -56,11 +55,66 @@ class LinkedList {
         return this;
     };
 
+    /** */
+    insert = (index, value) => {
+
+        if (index > this.length)
+            return `index ${index} is out of bounds`;
+
+        let curNode = this.head;
+        let curIndex = 1;
+        let newNode = new Node(value);
+        while (curNode !== null) {
+
+
+            // find index of curNode
+            if (index === curIndex) {
+                console.log(`Found index: ` + curIndex + `  Node: ` + curNode.value);
+
+                newNode.next = curNode; // helps from being lost in memory
+                this.head.next = newNode;
+                return curNode;
+            }
+
+            // what happens if not equal
+            curNode = curNode.next; // will move to next node
+            curIndex++;
+
+        }
+        return `insertion failed, please try again!`;
+    };
+
+    printList = (message) => {
+        console.log(` ${message}`);
+
+        const array = [];
+        let currentNode = this.head;
+        while (currentNode !== null) {
+            array.push(currentNode.value);
+            currentNode = currentNode.next;
+        }
+
+        console.log(array);
+        console.log(` Length: ${myLinkedList.length} \n`);
+        return;
+    };
+
 }
 
-
 const myLinkedList = new LinkedList(10);
+myLinkedList.printList('🟢 Initialized');
+
+
 myLinkedList.append(5);
 myLinkedList.append(16);
+myLinkedList.printList('🟡 Appended 5 & 16');
+
+
 myLinkedList.prepend(1);
-console.log(myLinkedList.head);
+myLinkedList.printList('🟣 Prepend 1');
+
+
+myLinkedList.printList('🔵 Insert 99');
+const newNode = myLinkedList.insert(3, 99);
+
+
