@@ -49,5 +49,14 @@
             ],
             "program": "${workspaceFolder}/Data-Structures/LinkedLists/Custom.js"
         },
+        {
+            "name": "Problem Solving",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/Problem-Solving/compareTriplets.js"
+        },
     ]
 }
